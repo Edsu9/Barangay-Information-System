@@ -1,0 +1,289 @@
+/* CS Form Styling - Government Form Style */
+.cs-form {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.cs-form-header {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #000;
+  background-color: #f0f0f0;
+}
+
+.cs-form-header h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.cs-form-header h3 {
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.cs-form-header p {
+  font-size: 12px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.cs-form-section {
+  margin: 0;
+  border: none;
+}
+
+.cs-form-section-header {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cs-form-section-content {
+  padding: 0;
+}
+
+.cs-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.cs-form-field {
+  flex: 1;
+  min-width: 200px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-right: 1px solid #000;
+  position: relative;
+}
+
+.cs-form-field:last-child {
+  border-right: none;
+}
+
+.cs-form-field.full-width {
+  flex: 0 0 100%;
+}
+
+.cs-form-field.half-width {
+  flex: 0 0 50%;
+}
+
+.cs-form-field.third-width {
+  flex: 0 0 33.333%;
+}
+
+.cs-form-field label {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 5px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #000;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.cs-form-field input,
+.cs-form-field select,
+.cs-form-field textarea {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.cs-form-field input:focus,
+.cs-form-field select:focus,
+.cs-form-field textarea:focus {
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+.cs-form-instructions {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.cs-form-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Checkbox styling */
+.cs-form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.cs-form-checkbox input {
+  width: auto;
+}
+
+/* Profile image styling */
+.profile-image-container {
+  width: 100px;
+  height: 120px;
+  border: 1px solid #000;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  font-size: 10px;
+  text-align: center;
+}
+
+.profile-image-placeholder i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-image-upload {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Form buttons */
+.cs-form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 1px solid #000;
+}
+
+.cs-form-buttons .btn {
+  padding: 0.5rem 0.9rem; /* Match new button sizes */
+  font-size: 0.9rem;
+}
+
+.cs-form-note {
+  font-size: 11px;
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Improve data view layout */
+.data-view {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Make data rows more responsive */
+/* Data display styling */
+.data-row {
+  display: flex;
+  margin: 0;
+  border-bottom: none;
+  padding: 0;
+}
+
+.data-label {
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 3px 5px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  width: 40%;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.data-value {
+  flex: 1;
+  padding: 5px;
+  font-size: 12px;
+  min-height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cs-form-field {
+    flex: 0 0 100%;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .cs-form-row {
+    flex-direction: column;
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 576px) {
+  .cs-form-field {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .data-row {
+    flex-direction: column;
+  }
+
+  .data-label,
+  .data-value {
+    width: 100%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .cs-form {
+    border: 1px solid #000;
+    padding: 0;
+  }
+
+  .cs-form-buttons,
+  .profile-image-upload {
+    display: none;
+  }
+}

@@ -1,0 +1,155 @@
+/* Module Layout Styling */
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.module-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.module-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.module-header .module-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.module-body {
+  padding: 1.5rem;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.module-stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.module-stats .count {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.module-stats .label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Updated Module action styles to match the new button sizes */
+.module-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.module-action {
+  padding: 0.4rem 0.8rem; /* Smaller padding */
+  background-color: var(--light-bg);
+  border-radius: 6px; /* Match new button radius */
+  color: var(--text-color);
+  font-size: 0.85rem; /* Smaller font */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* Reduced gap */
+}
+
+.module-action:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-1px); /* Match button hover effect */
+}
+
+.module-action i {
+  font-size: 0.8rem; /* Smaller icons */
+}
+
+/* Color variations for different modules */
+.module-residents .module-header {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.module-households .module-header {
+  background: linear-gradient(135deg, #2196f3, #0d47a1);
+}
+
+.module-documents .module-header {
+  background: linear-gradient(135deg, #ff9800, #e65100);
+}
+
+.module-blotter .module-header {
+  background: linear-gradient(135deg, #f44336, #b71c1c);
+}
+
+.module-reports .module-header {
+  background: linear-gradient(135deg, #9c27b0, #4a148c);
+}
+
+.module-users .module-header {
+  background: linear-gradient(135deg, #607d8b, #263238);
+}
+
+.module-backup .module-header {
+  background: linear-gradient(135deg, #795548, #3e2723);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modules-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .modules-container {
+    grid-template-columns: 1fr;
+  }
+}

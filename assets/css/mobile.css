@@ -1,0 +1,227 @@
+/* Mobile-friendly enhancements */
+@media (max-width: 768px) {
+    /* General adjustments */
+    body {
+      font-size: 14px;
+    }
+  
+    /* Increase touch targets */
+    .btn,
+    .menu-item,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      min-height: 44px; /* Minimum touch target size */
+      font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+  
+    /* Improve form layout */
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-col {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    /* Adjust container padding */
+    .form-container {
+      padding: 1rem;
+    }
+  
+    /* Make tables scrollable */
+    .data-table {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+  
+    /* Adjust action buttons */
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .action-buttons .btn {
+      width: 100%;
+      margin-bottom: 5px;
+      justify-content: center;
+    }
+  
+    /* Enhance sidebar for mobile */
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+  
+    .sidebar-collapsed .sidebar {
+      transform: translateX(0);
+    }
+  
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    /* Improve topbar layout */
+    .topbar {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .topbar h2 {
+      font-size: 1.5rem;
+    }
+  
+    /* Make toggle button more visible */
+    .toggle-sidebar {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+    }
+  
+    /* Improve modal views */
+    .modal-view {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+  
+    /* Enhance form inputs */
+    input,
+    select,
+    textarea {
+      padding: 12px;
+    }
+  
+    /* Improve login form */
+    .login-form {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+      padding: 1.5rem;
+    }
+  
+    /* Adjust dashboard cards */
+    .dashboard-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Improve alerts */
+    .alert {
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Improve dark mode for mobile */
+  @media (prefers-color-scheme: dark) and (max-width: 768px) {
+    body {
+      background-color: #121212;
+    }
+  
+    .form-container,
+    .topbar,
+    .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+  
+    .text-muted {
+      color: #aaa;
+    }
+  
+    input,
+    select,
+    textarea {
+      background-color: #2a2a2a;
+      color: #eee;
+      border-color: #444;
+    }
+  
+    .btn {
+      border: 1px solid #444;
+    }
+  
+    .alert {
+      background-color: #1a1a1a;
+      border-left-color: #444;
+    }
+  
+    .alert-success {
+      border-left-color: #2a623d;
+    }
+  
+    .alert-danger {
+      border-left-color: #8b2e2e;
+    }
+  }
+  
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+  
+  /* High contrast mode */
+  @media (forced-colors: active) {
+    .btn,
+    .menu-item,
+    .form-container,
+    .alert {
+      border: 2px solid;
+    }
+  }
+  
+  /* Touch-friendly enhancements */
+  @media (hover: none) and (pointer: coarse) {
+    /* Increase spacing for touch targets */
+    .menu-item {
+      padding: 12px 16px;
+    }
+  
+    /* Add visual feedback for touch */
+    .btn:active,
+    .menu-item:active {
+      transform: scale(0.98);
+      transition: transform 0.1s;
+    }
+  
+    /* Improve form controls */
+    input[type="checkbox"],
+    input[type="radio"] {
+      min-width: 24px;
+      min-height: 24px;
+    }
+  
+    /* Improve scrolling */
+    .data-table,
+    .form-container {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  

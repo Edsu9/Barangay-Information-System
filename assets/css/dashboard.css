@@ -1,0 +1,192 @@
+/* Dashboard-specific styles */
+.dashboard-stats {
+    margin-bottom: 2rem;
+  }
+  
+  .recent-section {
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .recent-section .form-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .recent-section .form-title i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+  }
+  
+  .recent-section .data-table {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .recent-section .data-table table {
+    margin-bottom: 0;
+  }
+  
+  .recent-section .data-table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .recent-section .data-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    transition: background-color 0.2s ease;
+  }
+  
+  .recent-section .data-table td {
+    vertical-align: middle;
+  }
+  
+  .recent-section .view-all {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .recent-section .view-all a {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+  }
+  
+  .recent-section .view-all a:hover {
+    color: var(--primary-hover);
+    transform: translateX(3px);
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dashboard cards enhancement */
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-cards .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dashboard-cards .card:nth-child(1) {
+    border-top: 4px solid #4caf50;
+  }
+  
+  .dashboard-cards .card:nth-child(2) {
+    border-top: 4px solid #2196f3;
+  }
+  
+  .dashboard-cards .card:nth-child(3) {
+    border-top: 4px solid #ff9800;
+  }
+  
+  .dashboard-cards .card:nth-child(4) {
+    border-top: 4px solid #f44336;
+  }
+  
+  .dashboard-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-cards .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+  
+  .dashboard-cards .card-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .dashboard-cards .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    transition: transform 0.3s;
+  }
+  
+  .dashboard-cards .card:nth-child(1) .card-icon {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+  }
+  
+  .dashboard-cards .card:nth-child(2) .card-icon {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+  }
+  
+  .dashboard-cards .card:nth-child(3) .card-icon {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+  }
+  
+  .dashboard-cards .card:nth-child(4) .card-icon {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+  }
+  
+  .dashboard-cards .card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .dashboard-cards .card-label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .dashboard-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  

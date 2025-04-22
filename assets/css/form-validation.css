@@ -1,0 +1,114 @@
+/* Form Validation and Password Strength Styles */
+
+/* Invalid form field */
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+  }
+  
+  .invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+  }
+  
+  /* Password strength meter */
+  .password-strength-meter {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .strength-meter {
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    width: 0;
+  }
+  
+  .strength-meter.weak {
+    background-color: #dc3545;
+  }
+  
+  .strength-meter.medium {
+    background-color: #ffc107;
+  }
+  
+  .strength-meter.strong {
+    background-color: #28a745;
+  }
+  
+  .strength-text {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  .text-warning {
+    color: #ffc107;
+  }
+  
+  .text-success {
+    color: #28a745;
+  }
+  
+  .password-requirements {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+  }
+  
+  /* Token notification */
+  .token-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 350px;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .token-notification i {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile responsiveness improvements */
+  @media (max-width: 576px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-col {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .token-notification {
+      left: 20px;
+      right: 20px;
+      max-width: calc(100% - 40px);
+    }
+  }
+  
