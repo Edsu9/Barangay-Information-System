@@ -45,22 +45,19 @@ include '../includes/header.php';
 <div class="form-container">
   <div class="form-title">
       <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span><i class="fas fa-user"></i> Resident Profile</span>
-          <div>
-              <a href="../residents/edit.php?id=<?php echo $id; ?>" class="btn btn-warning">
-                  <i class="fas fa-edit"></i> Edit
-              </a>
-              <a href="../../print_resident.php?id=<?php echo $id; ?>" class="btn btn-success" target="_blank">
-                  <i class="fas fa-print"></i> Print
-              </a>
-              <a href="../residents/delete.php?id=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this resident?')">
-                  <i class="fas fa-trash"></i> Delete
-              </a>
-              <a href="<?php echo isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'dashboard.php') !== false ? '../../dashboard.php' : '../../residents.php'; ?>" class="btn btn-primary">
-                  <i class="fas fa-arrow-left"></i> Back to <?php echo isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'dashboard.php') !== false ? 'Dashboard' : 'List'; ?>
-              </a>
-          </div>
-      </div>
+    <span><i class="fas fa-user"></i> Resident Profile</span>
+    <div>
+        <a href="../residents/edit.php?id=<?php echo $id; ?>" class="btn btn-warning">
+            <i class="fas fa-edit"></i> Edit
+        </a>
+        <a href="../residents/delete.php?id=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this resident?')">
+            <i class="fas fa-trash"></i> Delete
+        </a>
+        <a href="<?php echo isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'dashboard.php') !== false ? '../../dashboard.php' : '../../residents.php'; ?>" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Back to <?php echo isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'dashboard.php') !== false ? 'Dashboard' : 'List'; ?>
+        </a>
+    </div>
+</div>
   </div>
   
   <div class="cs-form">
